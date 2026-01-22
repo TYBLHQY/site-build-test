@@ -2,7 +2,7 @@ name: Build site on docs update
 
 on:
   repository_dispatch:
-    types: [docs-updated]
+    types: [docs-updated-off]
 
 jobs:
   build:
