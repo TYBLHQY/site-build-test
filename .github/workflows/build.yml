@@ -1,0 +1,20 @@
+name: Build site on docs update
+
+on:
+  repository_dispatch:
+    types: [docs-updated]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout B
+        uses: actions/checkout@v6
+
+      - name: Clone docs repo
+        run: |
+          git clone https://github.com/TYBLHQY/docs-source-test.git docs
+
+      - name: Check docs content
+        run: ls -l docs
+
