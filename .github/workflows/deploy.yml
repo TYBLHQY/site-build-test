@@ -40,11 +40,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Vitepress
-        run: pnpm docs:build
+        run: pnpm build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: docs/.vitepress/dist
+          path: .vitepress/dist
 
   deploy:
     environment:
