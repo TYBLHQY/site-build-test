@@ -21,6 +21,9 @@ jobs:
         run: |
           git clone https://github.com/TYBLHQY/docs-source-test.git docs
 
+      - name: Check docs content
+        run: ls -l && ls -l docs
+
       - name: Checkout B
         uses: actions/checkout@v6
       - uses: pnpm/action-setup@v4
