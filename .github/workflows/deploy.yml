@@ -17,10 +17,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone docs repo
-        run: |
-          git clone https://github.com/TYBLHQY/docs-source-test.git docs
-
       - name: Check docs content
         run: ls -l && ls -l docs
 
@@ -29,6 +25,10 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10
+
+      - name: Clone docs repo
+        run: |
+          git clone https://github.com/TYBLHQY/docs-source-test.git docs
 
       - name: Setup Node
         uses: actions/setup-node@v6
