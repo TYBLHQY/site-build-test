@@ -1,0 +1,12 @@
+name: Listen for docs update
+
+on:
+  repository_dispatch:
+    types: [docs-updated]
+
+jobs:
+  react:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "📢 Got update from Repo A!"
+
